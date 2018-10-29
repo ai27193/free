@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:tx="http://www.springframework.org/schema/tx"  
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="  
+           http://www.springframework.org/schema/beans  
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd  
+           http://www.springframework.org/schema/aop  
+           http://www.springframework.org/schema/aop/spring-aop-3.2.xsd
+           http://www.springframework.org/schema/tx   
+           http://www.springframework.org/schema/tx/spring-tx.xsd  
+           http://www.springframework.org/schema/context  
+           http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+	<!-- 自动扫描除了springMVC-servlet中以外的所有包，并针对注解的bean进行实例化 -->
+	<context:component-scan base-package="com.Freerun.DaoImpl" />
+	<context:component-scan base-package="com.Freerun.ServiceImpl" />
+	<context:component-scan base-package="com.Freerun.untilbean" />
+	<!-- Enable Hibernate's automatic session context management -->
+	
+  <!--   <context:property-placeholder location="classpath:jdbc_info.properties"/> -->
+	    <!-- 加载配置文件 -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">  
+	        <list>  
+	            <value>classpath:*.properties</value>	    
+	        </list>  
+	    </property>  
+	    <property name="ignoreUnresolvablePlaceholders" value="true" />   
+	</bean>
+
+    <!-- 数据源配置 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="url" value="${jdbc.url}"/>
+		<property name="driverClassName" value="${jdbc.driverClassName}"/>		
+		<property name="username" value="${jdbc.username}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	<!-- 注入hibernate的sessionFactory -->
+	<bean id="sessionFactory" 
+        class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <!-- 数据源 -->
+        <property name="dataSource" ref="dataSource" />
+        <!-- 扫描实体类包 -->
+        <property name="packagesToScan" value="com.Freerun.Entity" />
+        <!--     <list>
+                可以加多个包
+                <value>right.springmvc.hibernate.anno.entity</value>
+            </list>
+        </property> -->
+        <!-- hibernate常用属性 -->
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+                <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                <prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+                <prop key="hibernate.event.merge.entity_copy_observer">allow</prop>
+                	<!-- 自动建表 -->
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+        </property>
+    </bean>
+    <!-- 注解自动读取事务管理器 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+    
+    
+    <!-- spring事务管理 -->
+    <bean id="transactionManager"
+        class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+    </bean> 
+    	<!-- 引入redis配置 -->
+       <import resource="classpath:spring-reids.xml"/>
+</beans>

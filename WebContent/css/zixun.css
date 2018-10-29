@@ -1,0 +1,93 @@
+#ur_here {
+    height: 50px;
+    line-height: 50px;
+    color: #666;
+    clear: both;
+    font-size: 14px;
+}
+#ur_here a {
+    color: #333;
+}
+#ur_here code {
+    margin: 0 5px;
+}
+/*上面是地址栏，当前位置*/
+.art_con {
+    width: 100%;
+    float: left;
+    background: url(../images/dot.png) repeat-y 160px top;
+}
+.art_list {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+.art_time {
+    font-size: 18px;
+    text-align: center;
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    margin-top: -15px;
+    font-weight: bold;
+}
+.art_span {
+    width: 17px;
+    height: 17px;
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: 151px;
+    top: 50%;
+    margin-top: -8px;
+}
+.art_right {
+    width: 990px;
+    float: right;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 30px 0;
+}
+.art_img {
+    width: 350px;
+    float: left;
+}
+.art_img img {
+    width: 100%;
+}
+.art_rr {
+    width: 610px;
+    float: right;
+}
+.art_title {
+    width: 100%;
+    line-height: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.art_desc {
+    width: 100%;
+    line-height: 25px;
+    font-size: 14px;
+}
+.art_more {
+    width: 100%;
+    height: 40px;
+    float: left;
+    margin-top: 10px;
+}
+.art_more a {
+    width: 108px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    font-size: 14px;
+    float: right;
+    border-radius: 5px;
+}
+/*分页代码在其他css*/

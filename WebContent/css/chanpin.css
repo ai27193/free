@@ -1,0 +1,9 @@
+.categorybox .to_hidden{width:990px;}
+.categorybox .goodsItem{float:left;width:220px;margin:0px 4px 20px 0px;padding:10px;overflow:hidden;line-height:20px;_display:inline; text-align:center;border:1px solid #fff; position:relative; }
+.categorybox .goodsItem:hover{border:1px solid #c61818;}
+.categorybox .last{}
+.categorybox .goodsimg{width:220px;height:220px;}
+.categorybox .goodsItem_img{width:100%;height:220px;float:left; margin:0px;}
+.categorybox .goodsItem_refer{width:100%;height:30px;line-height:30px;float:left;}
+.categorybox .goodsItem_up{width:100%;line-height:30px;height:30px;float:left; color:#666;}
+.categorybox .goodsItem_comments{width:100%;float:left;height:30px;line-height:30px;color:#666;}

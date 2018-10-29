@@ -1,0 +1,56 @@
+#ur_here {
+    height: 50px;
+    line-height: 50px;
+    color: #666;
+    clear: both;
+    font-size: 14px;
+}
+#ur_here a {
+    color: #333;
+}
+#ur_here code {
+    margin: 0 5px;
+}
+#mypaytable td{ padding:15px 8px;}
+#Message_list  table.tabelData{ border:none;}
+table.tabelData { border-collapse:collapse; width:100%; margin:0 auto;border:1px solid #e5e5e5;border-top:0; background:#fff; color:#666}
+table.tabelData th{border-bottom:1px solid #e5e5e5;color:#333;padding:5px 0;font-weight:normal; background:#F8F8F8}
+table.tabelData td{padding:7px 0; line-height:180%}
+table.tabelData td.pt20{ padding-top:20px;}
+table.tabelData td.pb20{ padding-bottom:20px;}
+table.tabelData .simg{ width:65px; border:1px solid #E5E5E5; padding:2px;}
+table.tabelData  a.htab{ background:url(../images/htab.jpg) no-repeat right 5px; padding-right:9px}
+table.tabelData td.infont{ font-weight:bold}
+table.tabelData td .up_s{ font-family:Verdana, Geneva, sans-serif}
+table.tabelData td .down_s{ font-family:Verdana, Geneva, sans-serif; line-height:200%}
+
+table.goodslist td span.sns{ padding-top:8px; display:inline-block}
+table.goodslist tr.noline td{ padding:8px 0 0 !important;}
+table.goodslist td.lines{padding:0px 0 2px;border-bottom:1px solid #DEDEDE;}
+table.goodslist td a{}
+table.goodslist td span.icons{ display:inline-block; background:url(../images/edit.jpg) no-repeat; height:12px; width:12px; margin-left:8px;}
+table.goodslist td.pname{ position:relative}
+table.goodslist td.pname span.icons{ position:absolute; right:3px; top:36px;}
+table.goodslist td.lines{ position:relative}
+table.goodslist td.pname span.chkbox{ position:absolute; left:0px; top:10px;}
+table.goodslist td.pname .types{ padding-left:21px;}
+input.butbtn{ border:1px solid #e5e5e5; background:#fff; height:22px; line-height:19px; color:#666; cursor:pointer}
+
+table.userlist td.timg{ padding-left:8px;}
+table.userlist td.tdcs{ text-indent:12px;}
+
+table.datalist th{ text-indent:12px; font-weight:bold; background:none; border:none; padding:0px 0 2px 0; color:#666; font-weight:normal}
+table.datalist th.tbg{ background:#f8f8f8; padding:7px 0 !important;color:#333; font-weight:bold}
+table.datalist td.tdcs{ text-indent:12px; padding:0px 0 10px 0}
+
+table.goodslist .goodsattrbox{width:170px; margin:0}
+table.goodslist .goodsattrbox s,table.goodslist .orderattr_r s{ width:42px; height:21px; display:inline-block; vertical-align:middle; margin-left:24px;}
+table.goodslist .orderattr_r s{ margin:0}
+table.goodslist .goodsattrbox s.s1,table.goodslist .orderattr_r s.s1{ background:url(../images/supbtn.png) no-repeat 0 -52px;}
+table.goodslist .goodsattrbox s.s2,table.goodslist .orderattr_r s.s2{ background:url(../images/supbtn.png) no-repeat 0 -8px;}
+table.goodslist td.infos{ background:#FaFaFa; height:30px; line-height:25px; padding:0; vertical-align:middle;border-bottom:0px solid #e9e9e9;}
+table.goodslist td.infos .chkbox{ margin-left:3px;}
+table.goodslist .linet td{border-bottom:1px solid #e5e5e5;}
+table.goodslist .linet .sns{ color:#999}
+table.goodslist .orderattr_r{ margin-left:10px;}
+table.goodslist td a.nolink{ color:#999}
